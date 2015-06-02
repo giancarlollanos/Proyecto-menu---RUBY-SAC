@@ -1,0 +1,15 @@
+<%= simple_form_for(@dish) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :description %>
+    <%= f.input :status %>
+    <%= f.association :local,  label_method: :description, value_method: :id, :input_html => {:maxlength =>50, :style=> 'width: 250px'} %>
+  
+    <%= f.association :dishes_type, label_method: :description, value_method: :id, include_blank: true, :input_html => {:maxlength =>50, :style=> 'width: 150px'} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

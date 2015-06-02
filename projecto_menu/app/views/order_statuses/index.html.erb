@@ -1,0 +1,27 @@
+<h1>Listing order_statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @order_statuses.each do |order_status| %>
+      <tr>
+        <td><%= order_status.name %></td>
+        <td><%= order_status.status %></td>
+        <td><%= link_to 'Show', order_status %></td>
+        <td><%= link_to 'Edit', edit_order_status_path(order_status) %></td>
+        <td><%= link_to 'Destroy', order_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order status', new_order_status_path %>

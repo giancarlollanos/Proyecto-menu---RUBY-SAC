@@ -1,0 +1,28 @@
+<h2>Registrarse</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= f.error_notification %>
+
+
+
+  <div class="form-horizontal">
+   
+    <%= f.input :name, required: true, placeholder:'Nombres', :input_html => {:maxlength =>150, :style=> 'width: 270px'} %>
+    <%= f.input :last_name, required: true, autofocus: true, placeholder:'Apellidos', :input_html => {:maxlength =>150, :style=> 'width: 270px'} %>
+    <%= f.input :dni, required: true, autofocus: true, placeholder:'DNI', input_html: { maxlength: 8, :style=> 'width: 100px'}   %>
+    <%= f.input :email, required: true, autofocus: true, placeholder:'ejemplo@abc.com', :input_html => {:style=> 'width: 200px'} %>
+    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), :input_html => {:style=> 'width: 200px'} %>
+    <%= f.input :password_confirmation, required: true, :input_html => {:style=> 'width: 200px'} %>
+    <%= f.input :address, required: true, autofocus: true, placeholder:'Direccion', :input_html => {:style=> 'width: 350px'} %>
+    <%= f.input :phone, required: false, autofocus: true, :input_html => {:style=> 'width: 180px'} %>
+    <%= f.input :telephone, required: false, autofocus: true, :input_html => {:style=> 'width: 150px'} %>
+    <%= f.label :date_of_birth, required: true %><br /><%= f.date_field :date_of_birth %><br /><br />
+    
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Registrarse" %>
+  </div>
+<% end %>
+
+<%= render "users/shared/links" %>

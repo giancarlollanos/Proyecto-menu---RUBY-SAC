@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cant dishes:</strong>
+  <%= @order_detail.cant_dishes %>
+</p>
+
+<p>
+  <strong>Order headers:</strong>
+  <%= @order_detail.order_headers %>
+</p>
+
+<%= link_to 'Edit', edit_order_detail_path(@order_detail) %> |
+<%= link_to 'Back', order_details_path %>

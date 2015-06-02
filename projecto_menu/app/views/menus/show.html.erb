@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date menu:</strong>
+  <%= @menu.date_menu %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @menu.stock %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @menu.price %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @menu.status %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @menu.user %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @menu.local %>
+</p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @menu.week %>
+</p>
+
+<p>
+  <strong>Dish:</strong>
+  <%= @menu.dish %>
+</p>
+
+<%= link_to 'Edit', edit_menu_path(@menu) %> |
+<%= link_to 'Back', menus_path %>

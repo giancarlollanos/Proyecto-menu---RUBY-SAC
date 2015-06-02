@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dish.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dish.status %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @dish.local %>
+</p>
+
+<p>
+  <strong>Dishes type:</strong>
+  <%= @dish.dishes_type %>
+</p>
+
+<%= link_to 'Editar', edit_dish_path(@dish) %> |
+<%= link_to 'Atras', dishes_path %>

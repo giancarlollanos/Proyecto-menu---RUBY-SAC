@@ -38,11 +38,17 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+#Model Documentation
 gem 'annotate'
+
+#Twitter Bootstrap
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+
+#SimpleForms
 gem 'simple_form'
 
-#instalacion de Devise
-gem 'devise','3.5.1'
+gem 'devise'
+gem 'rails_admin'

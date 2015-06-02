@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date order:</strong>
+  <%= @order_header.date_order %>
+</p>
+
+<p>
+  <strong>Date update:</strong>
+  <%= @order_header.date_update %>
+</p>
+
+<p>
+  <strong>Date canceled:</strong>
+  <%= @order_header.date_canceled %>
+</p>
+
+<p>
+  <strong>Observations:</strong>
+  <%= @order_header.observations %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @order_header.amount %>
+</p>
+
+<p>
+  <strong>Datos customer:</strong>
+  <%= @order_header.datos_customer %>
+</p>
+
+<p>
+  <strong>Address customer:</strong>
+  <%= @order_header.address_customer %>
+</p>
+
+<p>
+  <strong>Phone customer:</strong>
+  <%= @order_header.phone_customer %>
+</p>
+
+<p>
+  <strong>Menus:</strong>
+  <%= @order_header.menus %>
+</p>
+
+<p>
+  <strong>Order status:</strong>
+  <%= @order_header.order_status %>
+</p>
+
+<%= link_to 'Edit', edit_order_header_path(@order_header) %> |
+<%= link_to 'Back', order_headers_path %>

@@ -1,0 +1,17 @@
+<%= simple_form_for(@week) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    
+    <%= f.input :name, :input_html => {:maxlength =>200, :style=> 'width: 150px'}%>
+    <label>Fecha Inicio</label><br />
+    <%= f.date_field :date_inic, :input_html => {:maxlength =>50, :style=> 'width: 100px'} %><br />
+    <label>Fecha Fin</label><br />
+    <%= f.date_field :date_fini, :input_html => {:maxlength =>50, :style=> 'width: 100px'} %>
+    <%= f.input :status %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

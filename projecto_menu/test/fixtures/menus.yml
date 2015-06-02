@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_menu: 2015-06-01 19:06:51
+  stock: 
+  price: 9.99
+  status: false
+  user_id: 
+  local_id: 
+  week_id: 
+  dish_id: 
+
+two:
+  date_menu: 2015-06-01 19:06:51
+  stock: 
+  price: 9.99
+  status: false
+  user_id: 
+  local_id: 
+  week_id: 
+  dish_id: 

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @local.description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @local.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @local.phone %>
+</p>
+
+<%= link_to 'Edit', edit_local_path(@local) %> |
+<%= link_to 'Back', locals_path %>

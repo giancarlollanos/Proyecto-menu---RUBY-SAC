@@ -1,0 +1,27 @@
+<h1>Listing profiles</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Descripcion</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |profile| %>
+      <tr>
+        <td><%= profile.name %></td>
+        <td><%= profile.status %></td>
+        <td><%= link_to 'Ver', profile %></td>
+        <td><%= link_to 'Editar', edit_profile_path(profile) %></td>
+        <td><%= link_to 'Eliminar', profile, method: :delete, data: { confirm: 'Está seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Perfil de Usuario', new_profile_path %>
