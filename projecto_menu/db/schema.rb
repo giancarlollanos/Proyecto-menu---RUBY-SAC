@@ -11,9 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 0) do
-=======
 ActiveRecord::Schema.define(version: 20150601212232) do
 
   create_table "dishes", force: true do |t|
@@ -137,6 +134,5 @@ ActiveRecord::Schema.define(version: 20150601212232) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
->>>>>>> b841ac0bc4153cf9a134d96107b7ea13477abf63
 
 end
