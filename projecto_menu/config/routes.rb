@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  
+
   root 'home#index'
   get 'home/index'
 
-=======
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :profiles
 
@@ -26,14 +24,11 @@ Rails.application.routes.draw do
   resources :dishes_types
 
   resources :order_statuses
-  
-  
->>>>>>> b841ac0bc4153cf9a134d96107b7ea13477abf63
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
