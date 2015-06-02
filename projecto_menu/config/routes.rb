@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  root "menus#index"
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :profiles
 
