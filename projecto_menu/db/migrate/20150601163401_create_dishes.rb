@@ -1,6 +1,6 @@
 class CreateDishes < ActiveRecord::Migration
   def change
-    drop_table :dishes
+   
     create_table :dishes do |t|
       t.text :description
       t.boolean :status
