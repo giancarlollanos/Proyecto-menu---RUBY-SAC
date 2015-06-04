@@ -1,0 +1,18 @@
+<h3>Bienvenido <%= current_user.name %> <%= current_user.last_name %> </h3>
+
+
+<h2>MENU <%=Date.today.strftime("%D")%> </h2>
+
+
+
+<% @menus.each do |menu| %>
+      <li>
+        <%= check_box_tag 'dishes_ids[]', menu.dish.id -%>
+        <%= h menu.dish.description -%> - <%= h menu.price -%>
+        <input id="user_born_on" name="user_name" type="number_field" />
+      
+      </li>
+  <% end %>
+
+
+

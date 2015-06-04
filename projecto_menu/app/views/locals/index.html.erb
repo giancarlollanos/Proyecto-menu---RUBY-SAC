@@ -1,5 +1,8 @@
 <h1>Lista de locales</h1>
 
+
+
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -16,9 +19,9 @@
         <td><%= local.description %></td>
         <td><%= local.address %></td>
         <td><%= local.phone %></td>
-        <td><%= link_to 'Show', local %></td>
-        <td><%= link_to 'Edit', edit_local_path(local) %></td>
-        <td><%= link_to 'Destroy', local, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', local %></td>
+        <td><%= link_to 'Editar', edit_local_path(local) %></td>
+        <td><%= link_to 'Eliminar', local, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

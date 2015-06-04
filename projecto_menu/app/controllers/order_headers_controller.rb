@@ -1,6 +1,7 @@
 class OrderHeadersController < ApplicationController
   before_action :set_order_header, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  
   respond_to :html
 
   def index

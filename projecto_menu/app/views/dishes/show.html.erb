@@ -12,12 +12,12 @@
 
 <p>
   <strong>Local:</strong>
-  <%= @dish.local %>
+  <%= @dish.local.description %>
 </p>
 
 <p>
   <strong>Dishes type:</strong>
-  <%= @dish.dishes_type %>
+  <%= @dish.dishes_type.description %>
 </p>
 
 <%= link_to 'Editar', edit_dish_path(@dish) %> |

@@ -10,7 +10,7 @@
     <%= f.association :week, label_method: :name, value_method: :id, :input_html => {:maxlength =>50, :style=> 'width: 180px'} %>
      <label>Fecha del menu</label><br />
     <%= f.date_field :date_menu, :input_html => {:maxlength =>50, :style=> 'width: 100px'} %>
-    <%= f.association :dish, label_method: :description, value_method: :id, :input_html => {:maxlength =>50, :style=> 'width: 220px'} %>
+    <%= f.association :dish, label_method: :description, value_method: :id, :input_html => {:maxlength =>50, :style=> 'width: 220px'} , :prompt => "Select un plato"%>
   </div>
   
    
