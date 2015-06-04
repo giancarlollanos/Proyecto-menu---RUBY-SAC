@@ -1,10 +1,20 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+<<<<<<< HEAD
   before_action :authenticate_user!
   
+=======
+>>>>>>> 4600c9f2c3c1bd033827f184aae0099a85c5fe3c
   respond_to :html
 
   def index
+    
+    if current_user.profile.id==1
+      flash[:notice] = 'Acceso'
+    else 
+      flash[:notice] = 'No tiene acceso'
+    end
+    
     @profiles = Profile.all
     respond_with(@profiles)
   end
