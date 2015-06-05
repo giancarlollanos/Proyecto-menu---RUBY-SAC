@@ -1,10 +1,13 @@
 class DishesController < ApplicationController
   before_action :set_dish, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  
 
   respond_to :html
 
   def index
+    
+    #current_user.profile.id
     @dishes = Dish.all
     respond_with(@dishes)
   end

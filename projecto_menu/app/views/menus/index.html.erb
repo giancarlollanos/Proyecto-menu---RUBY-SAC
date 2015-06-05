@@ -1,5 +1,19 @@
 <h1>Lista de menu</h1>
 
+
+
+
+  <% @menus.each do |menu| %>
+      <li>
+        <%= check_box_tag 'dishes_ids[]', menu.dish.id -%>
+        <%= h menu.dish.description -%> - <%= h menu.price -%>
+        <input id="user_born_on" name="user_name" type="number_field"/>
+
+      </li>
+  <% end %>
+
+
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -10,7 +24,7 @@
       <th>Local</th>
       <th>Semana</th>
       <th>Plato</th>
-      <th>Estado</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,7 +39,7 @@
         <td><%= menu.local.description %></td>
         <td><%= menu.week.name %></td>
         <td><%= menu.dish.description %></td>
-        <td><%= menu.status %></td>
+       
         <td><%= link_to 'Ver', menu %></td>
         <td><%= link_to 'Editar', edit_menu_path(menu) %></td>
         <td><%= link_to 'Eliminar', menu, method: :delete, data: { confirm: 'Esta seguro?' } %></td>

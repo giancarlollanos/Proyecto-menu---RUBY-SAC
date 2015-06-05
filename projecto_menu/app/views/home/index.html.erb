@@ -1,20 +1,18 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h3>Bienvenido <%= current_user.name %> <%= current_user.last_name %> </h3>
 
 
-<% if user_signed_in? %>
-<p>Sesion Iniciada</p>
-    <p> <%= link_to 'Cerrar Sesion', destroy_user_session_path, method: :delete %></p>
-<% else %>
-    <p> 
-        <%= link_to 'Iniciar Sesion', new_user_session_path %>
-        <%= 'o' %>
-        <%= link_to 'Registrarse', new_user_registration_path %>
-    </p>    
-<% end %>
+<h2>MENU <%=Date.today.strftime("%D")%> </h2>
 
 
-<% if current_user %>
-    <p>Por <%= current_user.email %></p>
-    <p><%= link_to 'Actualizar datos', edit_user_registration_path %></p>
-<% end %>
+
+<% @menus.each do |menu| %>
+      <li>
+        <%= check_box_tag 'dishes_ids[]', menu.dish.id -%>
+        <%= h menu.dish.description -%> - <%= h menu.price -%>
+        <input id="user_born_on" name="user_name" type="number_field" />
+      
+      </li>
+  <% end %>
+
+
+

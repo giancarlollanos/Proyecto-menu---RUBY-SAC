@@ -11,6 +11,7 @@ class MenusController < ApplicationController
 
   def show
     respond_with(@menu)
+    @dishes = Dish.select("id, description").where(:dish_id => params[:id]);
   end
 
   def new
