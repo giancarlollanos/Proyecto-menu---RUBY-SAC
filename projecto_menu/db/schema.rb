@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150601212232) do
+ActiveRecord::Schema.define(version: 20150607203119) do
 
   create_table "dishes", force: true do |t|
     t.text     "description"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20150601212232) do
   create_table "menus", force: true do |t|
     t.datetime "date_menu"
     t.integer  "stock"
-    t.decimal  "price",      precision: 10, scale: 0
+    t.decimal  "price",          precision: 10, scale: 0
     t.boolean  "status"
     t.integer  "user_id"
     t.integer  "local_id"
@@ -50,9 +50,11 @@ ActiveRecord::Schema.define(version: 20150601212232) do
     t.integer  "dish_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "dishes_type_id"
   end
 
   add_index "menus", ["dish_id"], name: "index_menus_on_dish_id", using: :btree
+  add_index "menus", ["dishes_type_id"], name: "index_menus_on_dishes_type_id", using: :btree
   add_index "menus", ["local_id"], name: "index_menus_on_local_id", using: :btree
   add_index "menus", ["user_id"], name: "index_menus_on_user_id", using: :btree
   add_index "menus", ["week_id"], name: "index_menus_on_week_id", using: :btree

@@ -1,19 +1,6 @@
 <h1>Lista de menu</h1>
 
 
-
-
-  <% @menus.each do |menu| %>
-      <li>
-        <%= check_box_tag 'dishes_ids[]', menu.dish.id -%>
-        <%= h menu.dish.description -%> - <%= h menu.price -%>
-        <input id="user_born_on" name="user_name" type="number_field"/>
-
-      </li>
-  <% end %>
-
-
-
 <table class="table table-striped">
   <thead>
     <tr>

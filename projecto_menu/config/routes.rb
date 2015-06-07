@@ -22,21 +22,30 @@ Rails.application.routes.draw do
 
   resources :order_statuses
   
+  resources :home
+   
   #resources :users, controllers: {show: 'User'}
   
   devise_for :users
-  #root "home#index"
-
-  devise_scope :user do
-    authenticated :user do
-      #root 'menus#index' #as: :authenticated_root
-      root 'home#index'
-    end
+  root "home#index"
+  #get 'home/index'
+  #get '/home/:id', to: 'home#index'
   
-    unauthenticated do
-      root 'devise/sessions#new', as: :unauthenticated_root
-    end
+  namespace :dynamic_select do
+    get ':local_id/dishes', to: 'dishes#index', as: 'dishes'
   end
+
+  # devise_scope :user do
+  #   authenticated :user do
+  #     #root 'menus#index' #as: :authenticated_root
+  #     root 'home#index'
+  #   end
+  
+  #   unauthenticated do
+  #     #root 'locals#index'
+  #     root 'devise/sessions#new', as: :unauthenticated_root
+  #   end
+  # end
 
  
 
