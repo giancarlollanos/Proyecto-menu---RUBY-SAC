@@ -31,24 +31,3 @@
 
 
 
-
-
- <div class="container">
-      <div class="row">
-        <div class="col-lg-9">
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
-        <div class="col-lg-3">
-          <div class="well sidebar-nav">
-            <h3>Nuestros Locales</h3>
-              <% @locals.each do |local| %>
-                <ul class="nav nav-list">
-            
-               <li><%= link_to local.description, home_path(local.id) %></li>
-
-            </ul>
-               <% end %> 
-          </div><!--/.well -->
-        </div><!--/span-->
-      </div><!--/row-->
