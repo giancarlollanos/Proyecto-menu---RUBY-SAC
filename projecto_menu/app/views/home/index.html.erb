@@ -1,18 +1,54 @@
-<h3>Bienvenido <%= current_user.name %> <%= current_user.last_name %> </h3>
 
 
-<h2>MENU <%=Date.today.strftime("%D")%> </h2>
+<% @join2.each do |f_menu| %>
+   <h2> <%= h f_menu.local.description -%></h2>
+   <h3> Menu del dia <%= h f_menu.date_menu.strftime("%d/%m/%y") -%></h3>
+<% end %>
+
+
+<% @join.sort.each do |nuevo| %>
+   
+       <div class="col6">
+         <div class="inner-one-third">
+            <p>  <%= nuevo.dish.dishes_type.description %></p>
+         </div>
+    </div>
+         <div>
+         <ul>
+         <li>
+         <%= check_box_tag 'dishes_ids[]', nuevo.dish.id -%>
+         <%= h nuevo.dish.description -%> - <%= h nuevo.price -%>
+         </li>
+    </ul>
+        </div>
+    
+   
+    
+<% end %>
 
 
 
-<% @menus.each do |menu| %>
-      <li>
-        <%= check_box_tag 'dishes_ids[]', menu.dish.id -%>
-        <%= h menu.dish.description -%> - <%= h menu.price -%>
-        <input id="user_born_on" name="user_name" type="number_field" />
-      
-      </li>
-  <% end %>
 
 
 
+
+
+ <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+        <div class="col-lg-3">
+          <div class="well sidebar-nav">
+            <h3>Nuestros Locales</h3>
+              <% @locals.each do |local| %>
+                <ul class="nav nav-list">
+            
+               <li><%= link_to local.description, home_path(local.id) %></li>
+
+            </ul>
+               <% end %> 
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
