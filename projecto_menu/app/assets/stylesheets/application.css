@@ -14,5 +14,3 @@
  *= require_self
  */
 
-$ ->
-  $('select[data-dynamic-selectable-url][data-dynamic-selectable-target]').dynamicSelectable()

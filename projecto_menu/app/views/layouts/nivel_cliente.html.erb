@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ProjectoMenu</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  
+   <!-- For third-generation iPad with high-resolution Retina display: -->
+    <!-- Size should be 144 x 144 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+
+    <!-- For iPhone with high-resolution Retina display: -->
+    <!-- Size should be 114 x 114 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+
+    <!-- For first- and second-generation iPad: -->
+    <!-- Size should be 72 x 72 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
+
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <!-- Size should be 57 x 57 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
+
+    <!-- For all other devices -->
+    <!-- Size should be 32 x 32 pixels -->
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+  
+  <%= javascript_include_tag 'application'%>
+  <%= csrf_meta_tags %>
+</head> 
+
+
+
+ <body>
+
+       
+
+<div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href=<%= home_path(1) %> >Comercio de Menu</a>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+          
+          </ul>
+      
+        <ul class="nav navbar-nav navbar-right">
+              
+                <% if current_user %>
+                    <li><%= current_user.name %> <%= current_user.last_name %> </li>
+                    <li><%= link_to 'Editar Perfil',edit_user_registration_path %></li>
+                    <li><%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete %></li>
+                <% else %>
+                    <li><%= link_to 'Iniciar Sesión', new_user_session_path %></li>
+                <% end %>
+            </ul>  </div>
+      </div>
+</div>
+
+    
+     <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+        <div class="col-lg-3">
+          <div class="well sidebar-nav">
+            <h3>Nuestros Locales</h3>
+              <% @locals.each do |local| %>
+                <ul class="nav nav-list">
+            
+               <li><%= link_to local.description, home_path(local.id) %></li>
+
+               </ul>
+               <% end %> 
+          </div><!--/.well method: :delete-->
+        </div><!--/span-->
+      </div><!--/row-->
+
+    
+    </div> <!-- /container -->
+    
+    
+    
+  </body>
+
+</html>
+

@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+layout "nivel_cliente"
+
   def index
    # if current_user.profile_id == 1
   #    redirect_to(locals_path)
