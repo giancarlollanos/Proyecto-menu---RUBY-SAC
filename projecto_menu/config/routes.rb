@@ -23,7 +23,9 @@ Rails.application.routes.draw do
   resources :order_statuses
   
   resources :home
-   
+  
+  resources :weeklocals
+  
   #resources :users, controllers: {show: 'User'}
   
   devise_for :users
