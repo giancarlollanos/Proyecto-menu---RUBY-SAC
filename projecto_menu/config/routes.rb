@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   #get 'home/index'
 
-  root "mymenu#index"
+  root 'home#index'
   
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :profiles
@@ -30,26 +30,21 @@ Rails.application.routes.draw do
   #resources :users, controllers: {show: 'User'}
   
   devise_for :users
-<<<<<<< HEAD
-  #root "home#index"
 
   devise_scope :user do
     authenticated :user do
       #root 'menus#index' #as: :authenticated_root
-      #root 'mymenu#index'
+      #root 'home#index'
     end
-=======
-  root "home#index"
+  end
+  
   #get 'home/index'
   #get '/home/:id', to: 'home#index'
->>>>>>> c1c5a473b626981b1ea7d30ecaaca34393310cad
-  
+
   namespace :dynamic_select do
     get ':local_id/dishes', to: 'dishes#index', as: 'dishes'
   end
 
-<<<<<<< HEAD
-=======
   # devise_scope :user do
   #   authenticated :user do
   #     #root 'menus#index' #as: :authenticated_root
@@ -117,5 +112,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
->>>>>>> c1c5a473b626981b1ea7d30ecaaca34393310cad
 end
