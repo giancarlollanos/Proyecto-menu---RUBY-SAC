@@ -1,15 +1,12 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
-  devise_for :installs
-=======
-<<<<<<< HEAD
-  resources :order_details
-=======
->>>>>>> 99e898b7f6bbe3b80fe33c4e1afeaec9287204f7
-  get 'mymenu/index'
->>>>>>> 27a901a46301351ae68765c455a59e4176bfe5da
 
+  devise_for :installs
+
+  resources :order_details
+
+  get 'mymenu/index'
+  
   #get 'home/index'
 
   root 'home#index'
@@ -40,9 +37,6 @@ Rails.application.routes.draw do
   #resources :users, controllers: {show: 'User'}
   
   devise_for :users
-<<<<<<< HEAD
-  #root "home#index"
-=======
 
   devise_scope :user do
     authenticated :user do
@@ -51,7 +45,6 @@ Rails.application.routes.draw do
     end
   end
   
->>>>>>> 27a901a46301351ae68765c455a59e4176bfe5da
   #get 'home/index'
   #get '/home/:id', to: 'home#index'
 
@@ -66,7 +59,7 @@ Rails.application.routes.draw do
     #end
   
     unauthenticated do
-      root 'home#index'
+      #root 'home#index'
       #root 'devise/sessions#new', as: :unauthenticated_root
     end
   end

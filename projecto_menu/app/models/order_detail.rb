@@ -1,4 +1,4 @@
 class OrderDetail < ActiveRecord::Base
-  has_many :order_headers
+  belongs_to :order_header
   belongs_to :dishes
 end
