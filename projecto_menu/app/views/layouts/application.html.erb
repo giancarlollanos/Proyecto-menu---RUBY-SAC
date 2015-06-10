@@ -40,6 +40,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href=<%= root_path %> >Comercio de Menu</a>
+        <li><%= link_to 'Editar Perfil',edit_user_registration_path %></li>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
            <li><%= link_to "Menu", "mymenu/index"  %></li>
@@ -75,7 +76,7 @@
               <li><%= link_to "Tipo de Platos", dishes_types_path  %></li>
               <li><%= link_to "Semana", weeks_path  %></li>
               <li><%= link_to "Perfil de Usuario", profiles_path  %></li>
-              
+              <li><%= link_to "Orden", order_headers_path  %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

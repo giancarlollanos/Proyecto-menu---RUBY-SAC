@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
   devise_for :installs
+=======
+<<<<<<< HEAD
+  resources :order_details
+=======
+>>>>>>> 99e898b7f6bbe3b80fe33c4e1afeaec9287204f7
   get 'mymenu/index'
+>>>>>>> 27a901a46301351ae68765c455a59e4176bfe5da
 
   #get 'home/index'
 
@@ -18,8 +25,6 @@ Rails.application.routes.draw do
 
   resources :dishes
   
-  resources :order_details
-
   resources :order_headers
 
   resources :dishes_types
@@ -27,10 +32,17 @@ Rails.application.routes.draw do
   resources :order_statuses
   
   resources :home
-   
+  
+  resources :weeklocals
+  
+  resources :weekmenus
+  
   #resources :users, controllers: {show: 'User'}
   
   devise_for :users
+<<<<<<< HEAD
+  #root "home#index"
+=======
 
   devise_scope :user do
     authenticated :user do
@@ -39,6 +51,7 @@ Rails.application.routes.draw do
     end
   end
   
+>>>>>>> 27a901a46301351ae68765c455a59e4176bfe5da
   #get 'home/index'
   #get '/home/:id', to: 'home#index'
 
@@ -46,17 +59,17 @@ Rails.application.routes.draw do
     get ':local_id/dishes', to: 'dishes#index', as: 'dishes'
   end
 
-  # devise_scope :user do
-  #   authenticated :user do
-  #     #root 'menus#index' #as: :authenticated_root
-  #     root 'home#index'
-  #   end
+  devise_scope :user do
+    #authenticated :user do
+      #root 'menus#index' #as: :authenticated_root
+    #  root 'home#index'
+    #end
   
-  #   unauthenticated do
-  #     #root 'locals#index'
-  #     root 'devise/sessions#new', as: :unauthenticated_root
-  #   end
-  # end
+    unauthenticated do
+      root 'home#index'
+      #root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
 
  
 
