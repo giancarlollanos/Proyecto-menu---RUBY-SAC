@@ -2,8 +2,12 @@
 
 one:
   cant_dishes: 1
-  order_headers_id: 
+  parcial_price: 9.99
+  orders_headers_id: 
+  dishes_id: 
 
 two:
   cant_dishes: 1
-  order_headers_id: 
+  parcial_price: 9.99
+  orders_headers_id: 
+  dishes_id: 

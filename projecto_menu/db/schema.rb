@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150607203119) do
+ActiveRecord::Schema.define(version: 20150609011757) do
 
   create_table "dishes", force: true do |t|
     t.text     "description"
@@ -61,11 +61,14 @@ ActiveRecord::Schema.define(version: 20150607203119) do
 
   create_table "order_details", force: true do |t|
     t.integer  "cant_dishes"
+    t.decimal  "parcial_price",    precision: 10, scale: 0
     t.integer  "order_headers_id"
+    t.integer  "dishes_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "order_details", ["dishes_id"], name: "index_order_details_on_dishes_id", using: :btree
   add_index "order_details", ["order_headers_id"], name: "index_order_details_on_order_headers_id", using: :btree
 
   create_table "order_headers", force: true do |t|

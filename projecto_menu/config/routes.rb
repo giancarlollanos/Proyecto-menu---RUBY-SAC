@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :order_details
+
   #get 'home/index'
 
   
@@ -14,8 +16,6 @@ Rails.application.routes.draw do
 
   resources :dishes
   
-  resources :order_details
-
   resources :order_headers
 
   resources :dishes_types
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   #resources :users, controllers: {show: 'User'}
   
   devise_for :users
-  root "home#index"
+  #root "home#index"
   #get 'home/index'
   #get '/home/:id', to: 'home#index'
   
@@ -35,17 +35,17 @@ Rails.application.routes.draw do
     get ':local_id/dishes', to: 'dishes#index', as: 'dishes'
   end
 
-  # devise_scope :user do
-  #   authenticated :user do
-  #     #root 'menus#index' #as: :authenticated_root
-  #     root 'home#index'
-  #   end
+  devise_scope :user do
+    #authenticated :user do
+      #root 'menus#index' #as: :authenticated_root
+    #  root 'home#index'
+    #end
   
-  #   unauthenticated do
-  #     #root 'locals#index'
-  #     root 'devise/sessions#new', as: :unauthenticated_root
-  #   end
-  # end
+    unauthenticated do
+      root 'home#index'
+      #root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
 
  
 

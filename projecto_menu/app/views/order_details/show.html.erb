@@ -6,8 +6,18 @@
 </p>
 
 <p>
-  <strong>Order headers:</strong>
-  <%= @order_detail.order_headers %>
+  <strong>Parcial price:</strong>
+  <%= @order_detail.parcial_price %>
+</p>
+
+<p>
+  <strong>Orders headers:</strong>
+  <%= @order_detail.orders_headers %>
+</p>
+
+<p>
+  <strong>Dishes:</strong>
+  <%= @order_detail.dishes %>
 </p>
 
 <%= link_to 'Edit', edit_order_detail_path(@order_detail) %> |
