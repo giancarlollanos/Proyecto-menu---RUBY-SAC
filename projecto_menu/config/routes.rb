@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   
   resources :weeklocals
   
+  resources :weekmenus
+  
   #resources :users, controllers: {show: 'User'}
   
   devise_for :users

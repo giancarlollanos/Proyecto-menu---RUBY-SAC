@@ -1,1 +1,24 @@
 <h1>Calendario Semanas de Menu por Local</h1>
+
+ <div class="container">
+      <div class="row">
+        <div class="col-lg-1">
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+        <div class="col-lg-3">
+          <div class="well sidebar-nav">
+            <h3>Nuestros Locales</h3>
+              <% @locals.each do |local| %>
+                <ul class="nav nav-list">
+            
+               <li><%= link_to local.description, weekmenus_path(1)  %></li>
+
+               </ul>
+               <% end %> 
+          </div><!--/.well method: :delete-->
+        </div><!--/span-->
+      </div><!--/row-->
+
+    
+    </div> <!-- /container -->
