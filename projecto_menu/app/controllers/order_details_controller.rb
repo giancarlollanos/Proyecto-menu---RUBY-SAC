@@ -1,7 +1,6 @@
 class OrderDetailsController < ApplicationController
   before_action :set_order_detail, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-  
+
   respond_to :html
 
   def index
@@ -43,6 +42,6 @@ class OrderDetailsController < ApplicationController
     end
 
     def order_detail_params
-      params.require(:order_detail).permit(:cant_dishes, :order_headers_id)
+      params.require(:order_detail).permit(:cant_dishes, :parcial_price, :orders_headers_id, :dishes_id)
     end
 end
