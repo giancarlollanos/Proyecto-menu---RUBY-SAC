@@ -1,10 +1,12 @@
-<% @join2.each do |f_menu| %>
+
+
+<% @join5.each do |f_menu| %>
    <h2> <%= h f_menu.local.description -%></h2>
    <h3> Menu del dia <%= h f_menu.date_menu.strftime("%d/%m/%y") -%></h3>
 <% end %>
 
 
-<% @join.sort.each do |nuevo| %>
+<% @join4.sort.each do |nuevo| %>
    
        <div class="col6">
          <div class="inner-one-third">
@@ -23,9 +25,3 @@
    
     
 <% end %>
-
-
-
-
-
-

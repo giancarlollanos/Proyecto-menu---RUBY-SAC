@@ -16,8 +16,7 @@ class HomeController < ApplicationController
       @join = Menu.joins(:dish, :local, :dishes_type).where("menus.local_id" => params[:id]).group("menus.dishes_type_id");
       @join2 = Menu.joins(:dish, :local).where("menus.local_id" => params[:id]).limit(1);
       
-      @tasks = Menu.joins(:dish, :local, :dishes_type).where("menus.local_id" => params[:id]);
-      @task_months = @tasks.group_by { |t| t.local_id }
+
       
   #   @join3 = Menu.joins(:dish, :local, :dishes_type).where("menus.local_id" => params[:id]);
   #    @task_months_2 = @join3.group("menus.dishes_type")
