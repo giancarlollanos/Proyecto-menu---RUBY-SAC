@@ -1,0 +1,50 @@
+<h3>Bienvenido</h3>
+
+<h2>MENU DE HOY <%=Date.today.strftime("%D")%> </h2>
+
+<form method="post">
+<br>
+Filtrar por local: <select id="locals_id" name="locals_id" onchange="porLocal()">
+<% @locals2.menus each do |locals2| %>
+<option value="<%= locals2.id %>" <% if params[:locals_id]==locals2.id then puts "selected" end %>><%= locals2.price %></option>
+<% end %>
+</select>
+Filtrar por local: <select id="locals_id" name="locals_id" onchange="porLocal()">
+<% @locals.each do |locals| %>
+<option value="<%= locals.id %>" <% if params[:locals_id]==locals.id then puts "selected" end %>><%= locals.description %></option>
+<% end %>
+</select>
+<br>
+
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Seleccionar</th>
+      <th>Descripcion</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @menus.each do |menu| %>
+      <tr>
+        <td><%= check_box_tag 'dishes_ids[]', menu.dish.id -%></td>
+        <td><%= menu.dish.description %></td>
+        <td><%= menu.price %></td>
+        <td><input type="text" id="cantidad" name="cantidad" value="1" /></td>
+      </tr>
+    <% end %>
+      <tr>
+      <td colspan="4" align="right" ><input type="submit" value="Agregar" /></td>
+      </tr>
+  </tbody>
+</table>
+</form>
+
+<script>
+function porLocal()
+{
+  document.location.href="/?locals_id="+document.getElementById("locals_id").value;
+}
+</script>

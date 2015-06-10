@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'mymenu/index'
+
   #get 'home/index'
 
+  root 'home#index'
   
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :profiles
@@ -29,10 +32,17 @@ Rails.application.routes.draw do
   #resources :users, controllers: {show: 'User'}
   
   devise_for :users
-  root "home#index"
+
+  devise_scope :user do
+    authenticated :user do
+      #root 'menus#index' #as: :authenticated_root
+      #root 'home#index'
+    end
+  end
+  
   #get 'home/index'
   #get '/home/:id', to: 'home#index'
-  
+
   namespace :dynamic_select do
     get ':local_id/dishes', to: 'dishes#index', as: 'dishes'
   end
