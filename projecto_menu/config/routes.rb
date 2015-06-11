@@ -39,15 +39,11 @@ Rails.application.routes.draw do
   #resources :users, controllers: {show: 'User'}
   
   devise_for :users
-<<<<<<< HEAD
-
-
-  #root "home#index"
-=======
 
   #root "home#index"
 
->>>>>>> 5cb4a73a5a94747950423bc63a92018a4399a0b2
+
+  #root "home#index"
 
   devise_scope :user do
     authenticated :user do
@@ -69,13 +65,13 @@ Rails.application.routes.draw do
     #  root 'home#index'
     #end
   
-<<<<<<< HEAD
-    unauthenticated do 
-      root 'home#index', as: :unauthenticated_root
+
+    #unauthenticated do 
+     # root 'home#index', as: :unauthenticated_root
       #root 'devise/sessions#new'
       #root 'home#index'
       #root 'devise/sessions#new', as: :unauthenticated_root
-=======
+
     unauthenticated do
 
       root 'home#index', as: :unauthenticated_root
@@ -84,7 +80,6 @@ Rails.application.routes.draw do
       #root 'home#index'
       #root 'devise/sessions#new', as: :unauthenticated_root
 
->>>>>>> 5cb4a73a5a94747950423bc63a92018a4399a0b2
     end
   end
 
