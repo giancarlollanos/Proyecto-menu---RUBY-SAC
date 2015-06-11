@@ -1,7 +1,6 @@
 class OrderStatusesController < ApplicationController
   before_action :set_order_status, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-  
+
   respond_to :html
 
   def index
@@ -43,6 +42,6 @@ class OrderStatusesController < ApplicationController
     end
 
     def order_status_params
-      params.require(:order_status).permit(:name, :status)
+      params.require(:order_status).permit(:name)
     end
 end

@@ -18,7 +18,7 @@ class OrderHeadersControllerTest < ActionController::TestCase
 
   test "should create order_header" do
     assert_difference('OrderHeader.count') do
-      post :create, order_header: { address_customer: @order_header.address_customer, amount: @order_header.amount, date_canceled: @order_header.date_canceled, date_order: @order_header.date_order, date_update: @order_header.date_update, datos_customer: @order_header.datos_customer, menus_id: @order_header.menus_id, observations: @order_header.observations, order_status_id: @order_header.order_status_id, phone_customer: @order_header.phone_customer }
+      post :create, order_header: { address_customer: @order_header.address_customer, amount: @order_header.amount, date_canceled: @order_header.date_canceled, date_order: @order_header.date_order, datos_customer: @order_header.datos_customer, local_id: @order_header.local_id, observations: @order_header.observations, order_status_id: @order_header.order_status_id, phone_customer: @order_header.phone_customer }
     end
 
     assert_redirected_to order_header_path(assigns(:order_header))
@@ -35,7 +35,7 @@ class OrderHeadersControllerTest < ActionController::TestCase
   end
 
   test "should update order_header" do
-    patch :update, id: @order_header, order_header: { address_customer: @order_header.address_customer, amount: @order_header.amount, date_canceled: @order_header.date_canceled, date_order: @order_header.date_order, date_update: @order_header.date_update, datos_customer: @order_header.datos_customer, menus_id: @order_header.menus_id, observations: @order_header.observations, order_status_id: @order_header.order_status_id, phone_customer: @order_header.phone_customer }
+    patch :update, id: @order_header, order_header: { address_customer: @order_header.address_customer, amount: @order_header.amount, date_canceled: @order_header.date_canceled, date_order: @order_header.date_order, datos_customer: @order_header.datos_customer, local_id: @order_header.local_id, observations: @order_header.observations, order_status_id: @order_header.order_status_id, phone_customer: @order_header.phone_customer }
     assert_redirected_to order_header_path(assigns(:order_header))
   end
 

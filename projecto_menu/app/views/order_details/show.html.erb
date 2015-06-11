@@ -6,18 +6,23 @@
 </p>
 
 <p>
+  <strong>Moneda:</strong>
+  <%= @order_detail.moneda %>
+</p>
+
+<p>
   <strong>Parcial price:</strong>
   <%= @order_detail.parcial_price %>
 </p>
 
 <p>
-  <strong>Orders headers:</strong>
-  <%= @order_detail.orders_headers %>
+  <strong>Order header:</strong>
+  <%= @order_detail.order_header %>
 </p>
 
 <p>
-  <strong>Dishes:</strong>
-  <%= @order_detail.dishes %>
+  <strong>Dish:</strong>
+  <%= @order_detail.dish %>
 </p>
 
 <%= link_to 'Edit', edit_order_detail_path(@order_detail) %> |

@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-#layout "nivel_cliente"
+layout "nivel_cliente"
 
   def index
   # if current_user.profile_id == 1

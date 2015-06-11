@@ -1,7 +1,6 @@
 class OrderHeadersController < ApplicationController
   before_action :set_order_header, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-  
+
   respond_to :html
 
   def index
@@ -43,6 +42,6 @@ class OrderHeadersController < ApplicationController
     end
 
     def order_header_params
-      params.require(:order_header).permit(:date_order, :date_update, :date_canceled, :observations, :amount, :datos_customer, :address_customer, :phone_customer, :menus_id, :order_status_id)
+      params.require(:order_header).permit(:date_order, :date_canceled, :observations, :amount, :datos_customer, :address_customer, :phone_customer, :local_id, :order_status_id)
     end
 end

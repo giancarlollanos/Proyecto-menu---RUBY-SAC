@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150609023722) do
+ActiveRecord::Schema.define(version: 20150611063351) do
 
   create_table "dishes", force: true do |t|
     t.text     "description"
@@ -79,37 +79,36 @@ ActiveRecord::Schema.define(version: 20150609023722) do
 
   create_table "order_details", force: true do |t|
     t.integer  "cant_dishes"
-    t.decimal  "parcial_price",    precision: 10, scale: 0
-    t.integer  "order_headers_id"
-    t.integer  "dishes_id"
+    t.string   "moneda"
+    t.decimal  "parcial_price",   precision: 10, scale: 0
+    t.integer  "order_header_id"
+    t.integer  "dish_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "order_details", ["dishes_id"], name: "index_order_details_on_dishes_id", using: :btree
-  add_index "order_details", ["order_headers_id"], name: "index_order_details_on_order_headers_id", using: :btree
+  add_index "order_details", ["dish_id"], name: "index_order_details_on_dish_id", using: :btree
+  add_index "order_details", ["order_header_id"], name: "index_order_details_on_order_header_id", using: :btree
 
   create_table "order_headers", force: true do |t|
-    t.date     "date_order"
-    t.date     "date_update"
-    t.date     "date_canceled"
+    t.datetime "date_order"
+    t.datetime "date_canceled"
     t.string   "observations"
     t.decimal  "amount",           precision: 10, scale: 0
     t.string   "datos_customer"
     t.string   "address_customer"
     t.string   "phone_customer"
-    t.integer  "menus_id"
+    t.integer  "local_id"
     t.integer  "order_status_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "order_headers", ["menus_id"], name: "index_order_headers_on_menus_id", using: :btree
+  add_index "order_headers", ["local_id"], name: "index_order_headers_on_local_id", using: :btree
   add_index "order_headers", ["order_status_id"], name: "index_order_headers_on_order_status_id", using: :btree
 
   create_table "order_statuses", force: true do |t|
     t.string   "name"
-    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

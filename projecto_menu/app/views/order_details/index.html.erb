@@ -4,9 +4,10 @@
   <thead>
     <tr>
       <th>Cant dishes</th>
+      <th>Moneda</th>
       <th>Parcial price</th>
-      <th>Orders headers</th>
-      <th>Dishes</th>
+      <th>Order header</th>
+      <th>Dish</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +16,10 @@
     <% @order_details.each do |order_detail| %>
       <tr>
         <td><%= order_detail.cant_dishes %></td>
+        <td><%= order_detail.moneda %></td>
         <td><%= order_detail.parcial_price %></td>
-        <td><%= order_detail.orders_headers %></td>
-        <td><%= order_detail.dishes %></td>
+        <td><%= order_detail.order_header %></td>
+        <td><%= order_detail.dish %></td>
         <td><%= link_to 'Show', order_detail %></td>
         <td><%= link_to 'Edit', edit_order_detail_path(order_detail) %></td>
         <td><%= link_to 'Destroy', order_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>

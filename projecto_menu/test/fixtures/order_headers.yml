@@ -1,25 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date_order: 2015-06-01
-  date_update: 2015-06-01
-  date_canceled: 2015-06-01
+  date_order: 2015-06-11 06:32:30
+  date_canceled: 2015-06-11 06:32:30
   observations: MyString
   amount: 9.99
   datos_customer: MyString
   address_customer: MyString
   phone_customer: MyString
-  menus_id: 
+  local_id: 
   order_status_id: 
 
 two:
-  date_order: 2015-06-01
-  date_update: 2015-06-01
-  date_canceled: 2015-06-01
+  date_order: 2015-06-11 06:32:30
+  date_canceled: 2015-06-11 06:32:30
   observations: MyString
   amount: 9.99
   datos_customer: MyString
   address_customer: MyString
   phone_customer: MyString
-  menus_id: 
+  local_id: 
   order_status_id: 

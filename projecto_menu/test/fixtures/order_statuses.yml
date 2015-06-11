@@ -2,8 +2,6 @@
 
 one:
   name: MyString
-  status: MyString
 
 two:
   name: MyString
-  status: MyString
