@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 20150609023722) do
 
   create_table "order_details", force: true do |t|
     t.integer  "cant_dishes"
-    t.decimal  "parcial_price",    precision: 10, scale: 0
+    t.decimal  "price",            precision: 10, scale: 0
     t.integer  "order_headers_id"
     t.integer  "dishes_id"
     t.datetime "created_at"
@@ -98,13 +98,11 @@ ActiveRecord::Schema.define(version: 20150609023722) do
     t.string   "datos_customer"
     t.string   "address_customer"
     t.string   "phone_customer"
-    t.integer  "menus_id"
     t.integer  "order_status_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "order_headers", ["menus_id"], name: "index_order_headers_on_menus_id", using: :btree
   add_index "order_headers", ["order_status_id"], name: "index_order_headers_on_order_status_id", using: :btree
 
   create_table "order_statuses", force: true do |t|
