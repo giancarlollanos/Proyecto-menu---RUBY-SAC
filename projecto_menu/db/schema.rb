@@ -79,16 +79,10 @@ ActiveRecord::Schema.define(version: 20150611063351) do
 
   create_table "order_details", force: true do |t|
     t.integer  "cant_dishes"
-<<<<<<< HEAD
-    t.decimal  "price",            precision: 10, scale: 0
-    t.integer  "order_headers_id"
-    t.integer  "dishes_id"
-=======
     t.string   "moneda"
     t.decimal  "parcial_price",   precision: 10, scale: 0
     t.integer  "order_header_id"
     t.integer  "dish_id"
->>>>>>> 5cb4a73a5a94747950423bc63a92018a4399a0b2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -104,19 +98,13 @@ ActiveRecord::Schema.define(version: 20150611063351) do
     t.string   "datos_customer"
     t.string   "address_customer"
     t.string   "phone_customer"
-<<<<<<< HEAD
-=======
     t.integer  "local_id"
->>>>>>> 5cb4a73a5a94747950423bc63a92018a4399a0b2
     t.integer  "order_status_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
-=======
   add_index "order_headers", ["local_id"], name: "index_order_headers_on_local_id", using: :btree
->>>>>>> 5cb4a73a5a94747950423bc63a92018a4399a0b2
   add_index "order_headers", ["order_status_id"], name: "index_order_headers_on_order_status_id", using: :btree
 
   create_table "order_statuses", force: true do |t|

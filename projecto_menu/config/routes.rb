@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'pedidos/show'
+
+  get 'pedidos/index'
+
+  resources :pedidos
+
   resources :order_details
 
   resources :order_headers

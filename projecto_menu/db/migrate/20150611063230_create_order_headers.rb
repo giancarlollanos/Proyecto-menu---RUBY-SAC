@@ -1,6 +1,6 @@
 class CreateOrderHeaders < ActiveRecord::Migration
   def change
-    
+    drop_table :order_headers
     create_table :order_headers do |t|
       t.datetime :date_order
       t.datetime :date_canceled
