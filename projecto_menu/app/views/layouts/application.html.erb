@@ -32,21 +32,6 @@
 
        
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="headertop needhead">
 		<!-- BLURED BACKGROUND-->
@@ -66,26 +51,28 @@
       <div class="navbar-inner">
         <div class="container"> <a class="brand" href="index.html"> 
 		<span>Comercio de Menu</span>
+		 <a class="navbar-brand" href=<%= root_path %> >Comercio de Menu</a>
 		<!--<img src="assets/img/Logo.png" alt="Logo">--></a>
 		
-		 <ul class="nav navbar-nav navbar-right">
-               <ul class="nav navbar-nav">
-            <li><%= link_to 'Editar Perfil',edit_user_registration_path %></li>
-           <li><%= link_to "Menu", "mymenu/index"  %></li>
-=======
+		  <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav">
+          <li><%= link_to 'Editar Perfil',edit_user_registration_path %></li>
+          <li><%= link_to "Menu33", "mymenu/index"  %></li>
+            
 <div class="navbar navbar-default navbar-static-top">
       <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href=<%= root_path %> >Comercio de Menu</a>
+	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	        </button>
+       
         <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-           <li><%= link_to "Menu", "Home/1"  %></li>
->>>>>>> bc5938f81cff8086cee08a1ffdb259c6d965be93
-          </ul>
+	          
+	          <ul class="nav navbar-nav">
+	          	<li><%= link_to 'Editar Perfil', edit_user_registration_path %></li>
+	            <li><%= link_to "Menu", home_path(1)  %></li>
+	          
           
                 <% if current_user %>
                     <li><%= current_user.name %> <%= current_user.last_name %> </li>
@@ -94,14 +81,12 @@
                 <% else %>
                     <li><%= link_to 'Iniciar Sesión', new_user_session_path %></li>
                 <% end %>
+               </ul>
             </ul> 
-		
-		
-         
         </div>
       </div>
     </div>
-  </div>
+ </div>
    <!-- ################-->
  <!-- END TOP MENU -->
  <!-- ################-->

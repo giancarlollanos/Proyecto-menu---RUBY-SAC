@@ -1,4 +1,4 @@
 class OrderHeader < ActiveRecord::Base
-  has_many :order_detail
+  belongs_to :local
   belongs_to :order_status
 end

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,22 +31,48 @@
 
  <body>
 
+       
+
+
+<div class="headertop needhead">
+		<!-- BLURED BACKGROUND-->
+		<div class="action-banner-bg"></div>
+		<!-- END BLURED BACKGROUND-->
+		
+		<!-- PIXEL BG DOTTS UNDER BLURED BACKGROUND-->
+		<div class="action-banner-bg-top"></div>
+		<!-- END PIXEL BG DOTTS UNDER BLURED BACKGROUND-->
+ 
+  <!-- ################-->
+ <!-- START TOP MENU -->
+ <!-- ################-->
+  <div class="nav-reaction">
+    <div class="navbar navbar-static-top"> 
+      <!-- navbar-fixed-top -->
+      <div class="navbar-inner">
+        <div class="container"> <a class="brand" href="index.html"> 
+		<span>Comercio de Menu</span>
+		 <a class="navbar-brand" href=<%= root_path %> >Comercio de Menu</a>
+		<!--<img src="assets/img/Logo.png" alt="Logo">--></a>
+		
+		  <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav">
+          <!--<li><= link_to 'Editar Perfil',edit_user_registration_path %></li>-->
+          <!--<li><= link_to "Menu33", "mymenu/index"  %></li>-->
+            
 <div class="navbar navbar-default navbar-static-top">
       <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href=<%= home_path(1) %> >Comercio de Menu</a>
-        
+	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	        </button>
+       
         <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-              <li><%= link_to 'Semanas', weeklocals_path  %></li>
-          </ul>
-      
-        <ul class="nav navbar-nav navbar-right">
-              
+	          
+	          <ul class="nav navbar-nav">
+
+           <li><%= link_to "Menu", home_path(1)  %></li>
                 <% if current_user %>
                     <li><%= current_user.name %> <%= current_user.last_name %> </li>
                     <li><%= link_to 'Editar Perfil',edit_user_registration_path %></li>
@@ -53,10 +80,102 @@
                 <% else %>
                     <li><%= link_to 'Iniciar Sesión', new_user_session_path %></li>
                 <% end %>
-            </ul>  </div>
+               </ul>
+            </ul> 
+        </div>
       </div>
-</div>
+    </div>
+ </div>
+   <!-- ################-->
+ <!-- END TOP MENU -->
+ <!-- ################-->
+ 
+<!-- SLIDER START-->
+			<div class="banner-rotator">
+				<div id="da-slider" class="da-slider">
+				<div class="da-slide">
+					<h2>Responsive template</h2>
+					<p>Use icons in the button that shows the meaning of call to action. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+					<span class="da-link">
+						<a href="features.html" class="">
+							<span class="main-link"><i class="fa-icon-tablet"></i> Availible on market</span> 
+							<span class="arrow"> &rarr;</span>
+						</a>
+					</span>
+					<div class="da-img visible-desktop"><img src="responsive.png" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>Easy customization</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+					<span class="da-link">
+						<a href="features.html" class="">
+							<span class="main-link">View Our project</span> 
+							<span class="arrow"> <i class="fa-icon-eye-open"></i></span>
+						</a>
+					</span>
+					<div class="da-img visible-desktop"><img src="showcase-slider_code.png" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>Colors presets</h2>
+					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+					<span class="da-link">
+						<a href="features.html" class="">
+							<span class="main-link">Download now!</span> 
+							<span class="arrow"><i class="fa-icon-download-alt"></i> </span>
+						</a>
+					</span>
+					<div class="da-img visible-desktop"><img src="showcase-slider.png" alt="image01" /></div>
+				</div>
+				
+				<nav class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>
+				</nav>
+			</div>
+			</div>
+			<!-- SLIDER [END]-->
 
+				<!-- SOCIAL PANEL UNDER MENU-->
+				 <div class="top-soc hidden-phone">
+					<div class="container">
+						<div class="row">
+							<ul class="social-top">
+								<li><a href="#" title="">
+								<i class="fa-icon-facebook"></i>
+								</a>
+								</li>
+								<li>
+								<a href="#" title="">
+								<i class="fa-icon-twitter"></i>
+								</a>
+								</li>
+								<li>
+								<a href="#" title="">
+								<i class="fa-icon-github-alt"></i>
+								</a>
+								</li>
+								<li>
+								<a href="#" title="">
+								<i class="fa-icon-google-plus"></i>
+								</a>
+								</li>
+								<li>
+								<a href="sitemap.html" title="">
+								<i class="fa-icon-sitemap"></i>
+								</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--END SOCIAL PANEL UNDER MENU-->
+			</div>
+
+
+  </body>
+
+
+    
     
      <div class="container">
       <div class="row">
@@ -80,6 +199,112 @@
 
     
     </div> <!-- /container -->
+    
+    
+    
+    
+    <footer class="footer">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span12">
+	  <div class="row-fluid">
+	  <div class="span1">
+       <span class="twitter-sign"> <i class="fa-icon-twitter fa-icon-large main-color"></i></span>
+		</div>
+		<div class="span11">
+          <p class="twitter-bottom"><span class="main-color">TWITTER FEED //</span> Projecting with VERSO has been a refreshing experience. They listened to our needs and came up with a <a href="#" title="twitter">great solution</a></p>
+          
+        </div>
+      </div> 
+	  </div>
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span3">
+        <h4 class="line3 center standart-h4title"><span>Navigation</span></h4>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">project</a></li>
+          <li><a href="#">Elements</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="span3">
+        <h4 class="line3 center standart-h4title"><span>Useful Links</span></h4>
+        <ul class="footer-links">
+          <li><a href="#">VERSO</a></li>
+          <li><a href="#">VERSO</a></li>
+          <li><a href="#">WordPress.com</a></li>
+          <li><a href="#">VERSO template</a></li>
+          <li><a href="#">Free Vector Icons</a></li>
+        </ul>
+      </div>
+      <div class="span3">
+        <h4 class="line3 center standart-h4title"><span>Our office</span></h4>
+       <address>
+									  <strong>VERSO, Inc.</strong><br />
+									  <i class="fa-icon-map-marker"></i> 795 Folsom Ave, Suite 600<br />
+									  San Francisco, CA 94107<br />
+									  <i class="fa-icon-phone-sign"></i> + 4 (123) 456-7890
+									  <div class="foot-line"></div>
+									  
+									</address>
+      </div>
+      <div class="span3">
+        <h4 class="line3 center standart-h4title"><span>Stay in touch</span></h4>
+        
+        <div class="widget_nav_menu"> 
+				<ul class="socialIcons">
+						<li class="vimeo"><a href="#">vimeo </a></li>
+						<li class="facebook"><a href="#">facebook </a></li>
+						<li class="linkedin"><a href="#">linkedin </a></li>
+						<li class="twitter"><a href="#">twitter</a></li>
+						<li class="twitter2"><a href="#">twitter2</a></li>
+						<li class="pinterest"><a href="#">pinterest</a></li>
+						<li class="flickr"><a href="#">flickr </a></li>
+						<li class="digg"><a href="#">digg</a></li>
+						<li class="yahoo1"><a href="#">yahoo1</a></li>
+						<li class="yahoo2"><a href="#">yahoo2</a></li>
+						<li class="reddit"><a href="#">reddit</a></li>
+						<li class="googleplus"><a href="#">googleplus</a></li>
+						<li class="stumbleupon"><a href="#">stumbleupon</a></li>
+						<li class="skype"><a href="#">skype</a></li>
+						<li class="deviantart"><a href="#">deviantart</a></li>
+						<li class="delicious"><a href="#">delicious </a></li>
+						<li class="tumblr"><a href="#">tumblr </a></li>
+						<li class="lastfm"><a href="#">lastfm </a></li>
+						<li class="youtube"><a href="#">youtube</a></li>
+						<li class="friendfeed"><a href="#">friendfeed </a></li>
+						<li class="myspace"><a href="#">myspace </a></li>
+						<li class="rss"><a href="#">rss </a></li>
+						<li class="badoo"><a href="#">badoo </a></li>
+						<li class="dribble"><a href="#">dribble </a></li>
+						<li class="blogger"><a href="#">blogger </a></li>
+						<li class="homeicon"><a href="#">homeicon</a></li>
+						<li class="phone"><a href="#">phone </a></li>
+						<li class="email"><a href="#">email </a></li>
+						<li class="picassa"><a href="#">picassa </a></li>
+						<li class="livejournal"><a href="#">livejournal </a></li>
+						<li class="bebo"><a href="#">bebo </a></li>
+						<li class="technorati"><a href="#">technorati </a></li>
+						<li class="newsvine"><a href="#">newsvine</a></li>
+						<li class="wordpress"><a href="#">wordpress </a></li>
+						<li class="yelp"><a href="#">yelp </a></li>
+                   </ul>
+				</div>
+      </div>
+    </div>
+    <hr class="half1 copyhr" />
+    <div class="row-fluid copyright">
+      <div class="span12 center">Copyright &copy; 2012. VERSO</div>
+    </div>
+  </div>
+</footer>
+    
+    
+    
+    
     
     
     

@@ -18,7 +18,7 @@ class OrderStatusesControllerTest < ActionController::TestCase
 
   test "should create order_status" do
     assert_difference('OrderStatus.count') do
-      post :create, order_status: { name: @order_status.name, status: @order_status.status }
+      post :create, order_status: { name: @order_status.name }
     end
 
     assert_redirected_to order_status_path(assigns(:order_status))
@@ -35,7 +35,7 @@ class OrderStatusesControllerTest < ActionController::TestCase
   end
 
   test "should update order_status" do
-    patch :update, id: @order_status, order_status: { name: @order_status.name, status: @order_status.status }
+    patch :update, id: @order_status, order_status: { name: @order_status.name }
     assert_redirected_to order_status_path(assigns(:order_status))
   end
 

@@ -42,6 +42,6 @@ class OrderDetailsController < ApplicationController
     end
 
     def order_detail_params
-      params.require(:order_detail).permit(:cant_dishes, :parcial_price, :orders_headers_id, :dishes_id)
+      params.require(:order_detail).permit(:cant_dishes, :moneda, :parcial_price, :order_header_id, :dish_id)
     end
 end

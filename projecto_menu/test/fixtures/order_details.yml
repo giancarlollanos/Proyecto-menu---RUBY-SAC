@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  cant_dishes: 1
+  cant_dishes: 
+  moneda: MyString
   parcial_price: 9.99
-  orders_headers_id: 
-  dishes_id: 
+  order_header_id: 
+  dish_id: 
 
 two:
-  cant_dishes: 1
+  cant_dishes: 
+  moneda: MyString
   parcial_price: 9.99
-  orders_headers_id: 
-  dishes_id: 
+  order_header_id: 
+  dish_id: 
