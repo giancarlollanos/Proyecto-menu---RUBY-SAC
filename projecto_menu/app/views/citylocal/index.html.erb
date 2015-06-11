@@ -1,0 +1,29 @@
+<h1>Ciudad</h1>
+
+<select name="idcity" id="idcity">
+  <option value=""></option>
+  <option value="1" selected="selected">LIMA</option>
+  <option value="2">CALLAO</option>
+  <option value="3">AREQUIPA</option>
+</select>
+
+<h1>Nuestros Locales</h1>
+<table class="table table-striped">
+  <tbody>
+      
+    <% @localswhere.each do |x| %>
+
+
+      <tr>  <th>Local</th> <td><%= x.description %></td></tr>
+      <tr> <th>Direccion</th> <td><%= x.address %></td></tr>
+      <tr> <th>Celular</th> <td><%= x.phone %></td></tr>
+      <tr>  <th>&nbsp;</th> <td>&nbsp;</td></tr>
+    <% end %>
+    
+  </tbody>
+</table>
+
+
+<br>
+
+

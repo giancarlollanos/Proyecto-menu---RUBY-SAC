@@ -1,6 +1,6 @@
 class CreateOrderDetails < ActiveRecord::Migration
   def change
-    
+    drop_table :order_details
     create_table :order_details do |t|
       t.integer :cant_dishes
       t.string :moneda

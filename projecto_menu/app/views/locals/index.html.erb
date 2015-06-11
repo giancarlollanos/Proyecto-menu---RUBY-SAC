@@ -9,6 +9,7 @@
       <th>Descripcion</th>
       <th>Direccion</th>
       <th>Celular</th>
+      <th>Ciudad</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,6 +20,7 @@
         <td><%= local.description %></td>
         <td><%= local.address %></td>
         <td><%= local.phone %></td>
+        <td><%= local.city %></td>
         <td><%= link_to 'Ver', local %></td>
         <td><%= link_to 'Editar', edit_local_path(local) %></td>
         <td><%= link_to 'Eliminar', local, method: :delete, data: { confirm: 'Are you sure?' } %></td>

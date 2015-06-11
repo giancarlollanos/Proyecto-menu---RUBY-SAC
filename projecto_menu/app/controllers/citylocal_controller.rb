@@ -1,12 +1,13 @@
-class LocalsController < ApplicationController
+class CitylocalController < ApplicationController
   before_action :set_local, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
   
   respond_to :html
 
   def index
     @locals = Local.all
-    respond_with(@locals)
+    @localswhere = Local.where("locals.city" => params[:id]);
+ 
+    #respond_with(@locals)
   end
 
   def show
