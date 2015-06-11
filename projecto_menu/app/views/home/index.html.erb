@@ -7,9 +7,9 @@
 <% @join.sort.each do |nuevo| %>
    
        <div class="col6">
-         <div class="inner-one-third">
-            <p>  <%= nuevo.dish.dishes_type.description %></p>
-         </div>
+         <!--<div class="inner-one-third">-->
+         <!--   <p>  <= nuevo.dish.dishes_type.description %></p>-->
+         <!--</div>-->
     </div>
          <div>
          <ul>
@@ -20,9 +20,32 @@
     </ul>
         </div>
     
-   
-    
 <% end %>
+
+<br><br><br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Plato</th>
+      <th>Precio U.</th>
+      <th>Cantidad</th>
+      <th>Precio Parcial</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @Orden.each do |orden_menu| %>
+      <tr>
+        <td><%= orden_menu.dish.description %></td>
+        <td><%= orden_menu.parcial_price.to_f %></td>
+        <td><%= orden_menu.cant_dishes %></td>
+        <td><%= orden_menu.cant_dishes * orden_menu.parcial_price.to_f %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 
 
 

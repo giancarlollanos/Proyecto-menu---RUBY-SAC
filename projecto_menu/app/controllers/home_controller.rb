@@ -9,6 +9,7 @@ layout "nivel_cliente"
   #     #redirect_to(weeks_path)
   #     #redirect_to @week
   # end
+      @Orden = OrderDetail.joins(:dish, :order_header).where("order_headers.local_id" => params[:id])
       @users = User.all
       @menus = Menu.all
       @locals = Local.all
@@ -30,6 +31,7 @@ layout "nivel_cliente"
   end
   
   def show
+      @Orden = OrderDetail.joins(:dish, :order_header).where("order_headers.local_id" => params[:id])
       @menus = Menu.all
       @locals = Local.all
       @dishes = Menu.select("id, menus.price, menus.dishes_types.description").where(:dish_id => params[:id]);
@@ -43,4 +45,5 @@ layout "nivel_cliente"
       render "home/index"
   end
   
+
 end

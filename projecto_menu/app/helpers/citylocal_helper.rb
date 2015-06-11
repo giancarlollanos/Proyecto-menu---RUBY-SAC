@@ -1,0 +1,2 @@
+module CitylocalHelper
+end

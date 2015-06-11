@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   resources :order_details
 
   resources :order_headers
@@ -35,6 +33,8 @@ Rails.application.routes.draw do
   resources :weeklocals
   
   resources :weekmenus
+  
+  resources :citylocal
   
   #resources :users, controllers: {show: 'User'}
   
