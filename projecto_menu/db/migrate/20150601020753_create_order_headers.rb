@@ -9,7 +9,6 @@ class CreateOrderHeaders < ActiveRecord::Migration
       t.string :datos_customer
       t.string :address_customer
       t.string :phone_customer
-      t.references :menus, index: true
       t.references :order_status, index: true
 
       t.timestamps
