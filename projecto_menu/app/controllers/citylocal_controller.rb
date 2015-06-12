@@ -1,5 +1,6 @@
 class CitylocalController < ApplicationController
-<<<<<<< HEAD
+layout "nivel_cliente"
+
   before_action :set_local, only: [:show, :edit, :update, :destroy]
   
   respond_to :html
@@ -47,14 +48,6 @@ class CitylocalController < ApplicationController
     def local_params
       params.require(:local).permit(:description, :address, :phone, :city)
     end
-end
-=======
-  def index
-     @locals = Local.all
-  end
   
-  def show
-    
-  end
 end
->>>>>>> a456bd43d71a1040045b1a75fa23207052f92139
+

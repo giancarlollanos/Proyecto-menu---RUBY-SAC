@@ -1,7 +1,7 @@
 <h2>Mis Pedidos</h2>
 
 <% @OrderHeader.each do |order_header| %>
-<h3>Fecha: <%=order_header.date_order %></h3>
+<h3>Fecha: <%=order_header.date_order.strftime("%d/%m/%y") %></h3>
 <h3>Total: S/. <%=order_header.amount %></h3>
 <% end %>
 <table class="table table-striped">

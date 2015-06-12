@@ -70,17 +70,11 @@
        
         <div class="navbar-collapse collapse navbar-responsive-collapse">
 	          
-	          <ul class="nav navbar-nav">
-
+          <ul class="nav navbar-nav">
            <li><%= link_to "Menu", home_path(1)  %></li>
-<<<<<<< HEAD
            <li><%= link_to "Nuestro Locales", citylocal_index_path  %></li>
-=======
            <li><%= link_to "Mis Pedidos", '/pedidos'  %></li>
-           <li><%= link_to "Administrador", rails_admin_path  %></li>
->>>>>>> a456bd43d71a1040045b1a75fa23207052f92139
-           
-           
+           <!--<li><= link_to "Administrador", rails_admin_path  %></li>-->
                 <% if current_user %>
                     <li><%= current_user.name %> <%= current_user.last_name %> </li>
                     <li><%= link_to 'Editar Perfil',edit_user_registration_path %></li>
@@ -193,7 +187,7 @@
         </div>
         <div class="col-lg-3">
           <div class="well sidebar-nav">
-            <h3>Nuestros Locales</h3>
+            <h3>Nuestros Platos por Locales</h3>
               <% @locals.each do |local| %>
                 <ul class="nav nav-list">
             

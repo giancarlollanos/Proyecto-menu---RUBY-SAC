@@ -42,32 +42,32 @@ Rails.application.routes.draw do
   
   resources :weekmenus
   
-<<<<<<< HEAD
+
   resources :citylocals
-=======
+
   resources :citylocal
->>>>>>> a456bd43d71a1040045b1a75fa23207052f92139
+
   
   #resources :users, controllers: {show: 'User'}
   
   devise_for :users
-<<<<<<< HEAD
+
+
+
+
+  #root "home#index"
 
 
 
   #root "home#index"
 
-=======
+
+
+
+
 
   #root "home#index"
->>>>>>> a456bd43d71a1040045b1a75fa23207052f92139
 
-
-<<<<<<< HEAD
-
-=======
-  #root "home#index"
->>>>>>> a456bd43d71a1040045b1a75fa23207052f92139
 
   devise_scope :user do
     authenticated :user do
@@ -90,13 +90,13 @@ Rails.application.routes.draw do
     #end
   
 
-<<<<<<< HEAD
+
    # unauthenticated do 
   #    root 'home#index', as: :unauthenticated_root
-=======
+
     #unauthenticated do 
      # root 'home#index', as: :unauthenticated_root
->>>>>>> a456bd43d71a1040045b1a75fa23207052f92139
+
       #root 'devise/sessions#new'
       #root 'home#index'
       #root 'devise/sessions#new', as: :unauthenticated_root
@@ -109,10 +109,7 @@ Rails.application.routes.draw do
       #root 'home#index'
       #root 'devise/sessions#new', as: :unauthenticated_root
 
-<<<<<<< HEAD
 
-=======
->>>>>>> a456bd43d71a1040045b1a75fa23207052f92139
     end
   end
 

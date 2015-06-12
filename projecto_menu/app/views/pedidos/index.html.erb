@@ -13,7 +13,7 @@
   <tbody>
     <% @OrderHeader.each do |order_header| %>
       <tr>
-        <td><%= order_header.date_order %></td>
+        <td><%= order_header.date_order.strftime("%d/%m/%y") %></td>
         <td>S/. <%= order_header.amount -%></td>
         <td><%= order_header.order_status.name -%></td>
         <td><%= link_to 'Ver', "/pedidos/#{order_header.id}" %></td>
