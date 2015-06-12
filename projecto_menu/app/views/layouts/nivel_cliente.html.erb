@@ -73,6 +73,9 @@
 	          <ul class="nav navbar-nav">
 
            <li><%= link_to "Menu", home_path(1)  %></li>
+           <li><%= link_to "Nuestro Locales", citylocal_index_path  %></li>
+           
+           
                 <% if current_user %>
                     <li><%= current_user.name %> <%= current_user.last_name %> </li>
                     <li><%= link_to 'Editar Perfil',edit_user_registration_path %></li>
