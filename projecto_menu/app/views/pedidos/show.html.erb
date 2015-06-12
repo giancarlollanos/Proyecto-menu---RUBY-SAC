@@ -1,0 +1,29 @@
+<h2>Mis Pedidos</h2>
+
+<% @OrderHeader.each do |order_header| %>
+<h3>Fecha: <%=order_header.date_order %></h3>
+<h3>Total: S/. <%=order_header.amount %></h3>
+<% end %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Cantidad</th>
+      <th>Descripción</th>
+      <th>Precio</th>
+      <th>Importe</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @OrderDetail.each do |order_detail| %>
+      <tr>
+        <td><%= order_detail.cant_dishes %></td>
+        <td><%= order_detail.dish.description %></td>
+        <td>S/. <%= order_detail.parcial_price %></td>
+        <td>S/. <%= order_detail.cant_dishes*order_detail.parcial_price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Volver', pedidos_path %>

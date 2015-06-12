@@ -1,0 +1,23 @@
+<h2>Mis Pedidos</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Total</th>
+      <th>Estado</th>
+      <th>Acción</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @OrderHeader.each do |order_header| %>
+      <tr>
+        <td><%= order_header.date_order %></td>
+        <td>S/. <%= order_header.amount -%></td>
+        <td><%= order_header.order_status.name -%></td>
+        <td><%= link_to 'Ver', "/pedidos/#{order_header.id}" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
